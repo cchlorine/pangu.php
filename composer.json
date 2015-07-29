@@ -1,0 +1,7 @@
+{
+    "name": "kunr/pangu.php",
+    "description": "Paranoid text spacing in PHP",
+    "require": {
+        "php": ">=5.2.0"
+    }
+}
