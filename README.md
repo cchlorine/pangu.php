@@ -12,6 +12,13 @@ Paranoid text spacing for good readability, to automatically insert whitespace b
 
 ## Instalation
 
+Using composer
+```
+composer require kunr/pangu.php
+```
+
+Or manually
+
 ```
 git clone https://github.com/Kunr/pangu.php.git
 ```
