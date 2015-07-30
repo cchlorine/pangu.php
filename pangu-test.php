@@ -11,7 +11,7 @@ class PanguTest extends PHPUnit_Framework_Testcase
 
 
   public function testTilde() {
-    $this->assertEquals('前面 ~ 後面', pangu('前面~後面'));
+    $this->assertEquals('前面~ 後面', pangu('前面~後面'));
     $this->assertEquals('前面 ~ 後面', pangu('前面 ~ 後面'));
   }
 
@@ -107,7 +107,7 @@ class PanguTest extends PHPUnit_Framework_Testcase
 
 
   public function testUnderscore() {
-    $this->assertEquals('前面 _ 後面', pangu('前面_後面'));
+    $this->assertEquals('前面_後面', pangu('前面_後面'));
     $this->assertEquals('前面 _ 後面', pangu('前面 _ 後面'));
   }
 
