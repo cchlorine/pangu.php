@@ -20,7 +20,6 @@ function pangu($text) {
          '\x{f900}-\x{faff}';
 
   $patterns = array(
-    // Add spaces before and after quotes
     'cjk_quote' => array(
       '([' . $cjk . '])(["\'])',
       '$1 $2'
@@ -31,13 +30,11 @@ function pangu($text) {
       '$1 $2'
     ),
 
-    // Fix quotes
     'fix_quote' => array(
       '(["\']+)(\s*)(.+?)(\s*)(["\']+)',
       '$1$3$5'
     ),
 
-    // Signal #
     'cjk_hash' => array(
       '([' . $cjk . '])(#(\S+))',
       '$1 $2'
@@ -49,12 +46,17 @@ function pangu($text) {
     ),
 
     'cjk_operator_ans' => array(
-      '([' . $cjk . '])([\+\-\*\/\=&\|\<\>])([A-Za-z0-9])',
+      '([' . $cjk . '])([A-Za-z0-9])([\+\-\*\/=&\\|<>])',
       '$1 $2 $3'
     ),
 
     'ans_operator_cjk' => array(
-      '([\+\-\*\/\=&\|\<\>])([A-Za-z0-9])([' . $cjk . '])',
+      '([\+\-\*\/=&\\|<>])([A-Za-z0-9])([' . $cjk . '])',
+      '$1 $2 $3'
+    ),
+
+    'cjk_ans_cjk' => array(
+      '([' . $cjk . '])' . '([~|_])' . '([' . $cjk . '])',
       '$1 $2 $3'
     ),
 
@@ -83,22 +85,23 @@ function pangu($text) {
     ),
 
     'cjk_ans' => array(
-      '([' . $cjk . '])([a-z0-9`@&%=\$\^\*\-\+\|\/\\\])',
+      '([' . $cjk . '])([A-Za-z0-9`@&%\=\$\^\*\-\+\\/|\\\])',
       '$1 $2'
     ),
 
     'ans_cjk' => array(
-      '([a-z0-9`@&%=\$\^\*\-\+\|\/\\\])([' . $cjk . '])',
+      '([A-Za-z0-9`~!%&=;\|\,\.\:\?\$\^\*\-\+\/\\\])([' . $cjk . '])',
       '$1 $2'
     )
   );
 
   foreach ($patterns as $key => $value) {
     if ($key === 'bracket') {
-      $tmp = $text;
-      $text = preg_replace('/' . $value[0][0] . '/iu', $value[0][1], $text);
- 
-      if ($text === $tmp) {
+      $old = $text;
+      $new = preg_replace('/' . $value[0][0] . '/iu', $value[0][1], $text);
+      $text = $new;
+
+      if ($old === $new) {
         foreach ($value[1] as $value) {
           $text = preg_replace('/' . $value[0] . '/iu', $value[1], $text);
         }
