@@ -5,12 +5,12 @@ Paranoid text spacing for good readability, to automatically insert whitespace b
 * Go version: [pangu.go](https://github.com/vinta/pangu)
 * Java version: [pangu.java](https://github.com/vinta/pangu.java)
 * JavaScript version: [pangu.js](https://github.com/vinta/paranoid-auto-spacing)
-* Object-C version [pangu.obeject-c](https://github.com/Cee/pangu.objective-c)
 * Node.js version: [pangu.node](https://github.com/huei90/pangu.node)
+* Object-C version [pangu.obejective-c](https://github.com/Cee/pangu.objective-c)
 * Python version: [pangu.py](https://github.com/vinta/pangu.py)
 * Ruby version: [pangu.rb](https://github.com/dlackty/pangu.rb)
 
-## Instalation
+## Installation
 
 Using composer
 ```
