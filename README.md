@@ -1,5 +1,7 @@
 pangu.php
 ===
+![TravisCI](https://travis-ci.org/Kunr/pangu.php.svg)
+
 Paranoid text spacing for good readability, to automatically insert whitespace between CJK (Chinese, Japanese, Korean) and half-width characters (alphabetical letters, numerical digits and symbols).
 
 * Go version: [pangu.go](https://github.com/vinta/pangu)
