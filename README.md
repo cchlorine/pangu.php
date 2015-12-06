@@ -8,7 +8,7 @@ Paranoid text spacing for good readability, to automatically insert whitespace b
 * Java version: [pangu.java](https://github.com/vinta/pangu.java)
 * JavaScript version: [pangu.js](https://github.com/vinta/paranoid-auto-spacing)
 * Node.js version: [pangu.node](https://github.com/huei90/pangu.node)
-* Object-C version [pangu.obejective-c](https://github.com/Cee/pangu.objective-c)
+* Object-C version [pangu.objective-c](https://github.com/Cee/pangu.objective-c)
 * Python version: [pangu.py](https://github.com/vinta/pangu.py)
 * Ruby version: [pangu.rb](https://github.com/dlackty/pangu.rb)
 
