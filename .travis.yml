@@ -7,4 +7,7 @@ php:
   - 7.2
   - hhvm
 
-script: phpunit
+install:
+  - travis_retry composer install --no-interaction --no-suggest
+
+script: ./vendor/bin/phpunit
