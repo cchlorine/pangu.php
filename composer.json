@@ -1,5 +1,5 @@
 {
-    "name": "kunr/pangu.php",
+    "name": "clanceylin/pangu.php",
     "description": "Paranoid text spacing in PHP",
     "license": "MIT",
     "require": {
@@ -7,9 +7,12 @@
     },
     "authors": [
       {
-        "name": "Rakume Hayashi",
-        "email": "i@fake.moe",
-        "homepage": "https://kunr.me"
+        "name": "Clancey Lin",
+        "email": "h@rakume.com",
+        "homepage": "http://rakume.com"
       }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
 }
