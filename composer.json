@@ -11,5 +11,8 @@
         "email": "h@rakume.com",
         "homepage": "http://rakume.com"
       }
-    ]
+    ],
+    "require-dev": {
+        "phpunit/phpunit": "^6.5"
+    }
 }

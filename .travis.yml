@@ -1,15 +1,19 @@
 language: php 
 
-os: osx
-dist: trusty
+os:
+  - linux
+  - osx
+
 sudo: false
 
 php: 
   - 5.3
+    dist: precise
   - 5.4
   - 5.5
   - 5.6
   - 7.0
-  - hhvm 
+  - hhvm
+    dist: trusty
 
-script: phpunit --coverage-text
+script: phpunit
