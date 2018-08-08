@@ -30,7 +30,7 @@ git clone https://github.com/Kunr/pangu.php.git
 Require `pangu.php`
 ```
 require 'pangu.php';
-echo pang('Jackie的鼻子有幾個？123個！'); // Jackie 的鼻子有幾個？123 個！
+echo pangu('Jackie的鼻子有幾個？123個！'); // Jackie 的鼻子有幾個？123 個！
 ```
 
 Or
