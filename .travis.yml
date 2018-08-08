@@ -17,4 +17,7 @@ matrix:
     - php: hhvm
       dist: trusty
 
-script: phpunit
+install:
+  - travis_retry composer install --no-interaction --no-suggest
+
+script: ./vendor/bin/phpunit
