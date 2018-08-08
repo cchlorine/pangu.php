@@ -1,7 +1,8 @@
 <?php
 
 require_once 'pangu.php';
-class PanguTest extends PHPUnit_Framework_Testcase
+use PHPUnit\Framework\TestCase;
+class PanguTest extends TestCase
 {
 
   public function testSpacingText() {
